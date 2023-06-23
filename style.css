@@ -1,0 +1,58 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0 auto;
+  width: 250px;
+/*   background: #CCFFFF; */
+}
+
+nav {
+  padding-top: 20px;
+  background: url('http://i628.photobucket.com/albums/uu2/mets09/rope.png') top left repeat;
+  background-size: 125px;
+}
+
+a {
+  display: block;
+  position: relative;
+  text-align: center;
+  background: #A0D95F;
+  color: #FFF;
+  margin: 25px 0;
+  padding: 10px 0;
+  font-size: 20px;
+  font-family: cursive;
+  text-decoration:none;
+  border: 2px dashed green;
+  outline: 6px solid #A0D95F;
+  backface-visibility: hidden;
+  transition: transform 0.2s ease-in-out;
+  z-index: 2;
+}
+a:hover {
+  text-decoration: underline;
+  outline: 6px solid A0D95F;
+}
+
+a:before {
+  top: -5px;
+  bottom: -5px;
+  left: -8px;
+  right: -8px;
+  box-shadow: 0 0 10px 1px #000;
+  border-radius: 0px;
+  content: '';
+  position: absolute;
+  z-index: -2;
+}
+
+a:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+a:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+a:hover:nth-child(odd), a:hover:nth-child(even) {
+  transform: rotate(0deg);
+}
